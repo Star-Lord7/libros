@@ -20,7 +20,7 @@ public class LibroService {
     }
 
     public Libro buscarLibroPorTitulo(String titulo) {
-        // Evitar duplicados
+        
         Optional<Libro> existente = libroRepository.findByTitulo(titulo);
         if (existente.isPresent()) {
             return existente.get();
